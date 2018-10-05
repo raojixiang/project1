@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.itheima.springboot.mapper.NoticeMapper">
+	
+	<select id="count" resultType="long">
+		select count(*) from notice
+	</select>
+	
+	<select id="findList" resultType="notice">
+		select * from notice limit #{page},#{rows}
+	</select>
+
+
+</mapper>
